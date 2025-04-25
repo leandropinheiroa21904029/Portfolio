@@ -1,0 +1,99 @@
+{% extends 'portfolio/base.html' %}
+
+    {% block main %}
+    
+        <section style="max-width: 800px; margin: 2rem auto; font-family: sans-serif;">
+        
+            <header style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding: 10px; background-color: #aedcb9; border-radius: 8px;">
+                <h2 style="margin: 0; flex: 1; text-align: left;">{{ projeto.nome }}</h2>
+                <span style="text-align: right; font-weight: bold;">{{ projeto.disciplina }}</span>
+            </header>
+        
+            <section style="background-color: #f0fff0; padding: 15px; border-radius: 8px; margin-bottom: 2rem;">
+                <h3 style="margin-top: 0; text-align: left;">Descrição:</h3>
+                <p style="text-align: left;">{{ projeto.descricao }}</p>
+        
+                {% if projeto.imagens.all %}
+                <h3 style="text-align: left;">Imagens:</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 1rem;">
+                    {% for imagem in projeto.imagens.all %}
+                    <figure style="max-width: 250px; text-align: center;">
+                        <img src="{{ imagem.imagem.url }}" alt="{{ imagem.descricao }}" style="width: 100%; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1);">
+                        <figcaption style="margin-top: 0.5rem; font-size: 0.9rem;">{{ imagem.descricao }}</figcaption>
+                    </figure>
+                    {% endfor %}
+                </div>
+                {% endif %}
+        
+                <h3 style="text-align: left;">Desafios:</h3>
+                <p style="text-align: left;">{{ projeto.curiosidades.desafios }}</p>
+        
+                <h3 style="text-align: left;">Interesses:</h3>
+                <p style="text-align: left;">{{ projeto.curiosidades.interesses }}</p>
+        
+                <h3 style="text-align: left;">Conceitos:</h3>
+                <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px;">
+                    {% for conceito in projeto.conceitos.all %}
+                    <li style="background: white; padding: 6px 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        {{ conceito.nome }}
+                    </li>
+                    {% empty %}
+                    <li>Nenhum conceito associado.</li>
+                    {% endfor %}
+                </ul>
+        
+                {% if projeto.link_git or projeto.link_video %}
+                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 1rem; flex-wrap: wrap;">
+                    {% if projeto.link_git %}
+                    <a href="{{ projeto.link_git }}" target="_blank" style="color: #5e3fbe; text-decoration: none; font-weight: bold;">
+                        🔗 GitHub
+                    </a>
+                    {% endif %}
+                    {% if projeto.link_video %}
+                    <a href="{{ projeto.link_video }}" target="_blank" style="color: #5e3fbe; text-decoration: none; font-weight: bold;">
+                        📹 Vídeo
+                    </a>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </section>
+        
+            <h3 style="text-align: center;">Tecnologias utilizadas:</h3>
+            <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                {% for tecnologia in projeto.tecnologias.all %}
+                <li style="background: #f0fff0; padding: 8px 12px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: background-color 0.3s, transform 0.2s;">
+                    <a href="{% url 'portfolio:tecnologia_path' tecnologia.id %}" style="text-decoration: none; color: #333; display: block; padding: 6px 10px;">
+                        {{ tecnologia.nome }}
+                    </a>
+                </li>
+                {% empty %}
+                <li>Nenhuma tecnologia associada.</li>
+                {% endfor %}
+            </ul>
+        
+            <style>
+                ul li {
+                    transition: background-color 0.3s, transform 0.2s;
+                }
+        
+                ul li:hover {
+                    background-color: #ece4ff !important;
+                    transform: scale(1.03);
+                }
+        
+                ul li a {
+                    display: block;
+                    padding: 6px 10px;
+                    color: #333;
+                    text-decoration: none;
+                    transition: color 0.2s;
+                }
+        
+                ul li:hover a {
+                    color: black;
+                }
+            </style>
+        
+        </section>
+    
+    {% endblock %}

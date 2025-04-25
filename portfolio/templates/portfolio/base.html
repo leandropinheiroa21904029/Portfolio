@@ -1,0 +1,148 @@
+<html>
+<head>
+    <style>
+        body {
+            background: #d9f8d6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #a8ddb5;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #2f4f4f;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2f4f4f;
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #f0fff0;
+            border-radius: 10px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        nav a.active {
+            background-color: #ece4ff;;
+            font-weight: bold;
+        }
+
+        nav a.active::before {
+            content: "✨ ";
+        }
+
+        nav a:hover {
+            background-color: #d4f4c4;
+            transform: scale(1.05);
+        }
+
+        nav a:hover::after {
+            content: " 🚀";
+        }
+
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #a8ddb5;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-weight: bold;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+
+        ul {
+            list-style-position: inside;
+            text-align: center;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+        
+        .tagline {
+            font-family: 'Cursive', 'Brush Script MT', 'Dancing Script', 'Great Vibes', sans-serif;
+            font-size: 1.2em;
+            color: #4b4b4b;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        ul.projetos-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        ul.projetos-list li {
+            margin: 10px 0;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: background-color 0.3s, transform 0.2s;
+            overflow: hidden;
+        }
+        
+        ul.projetos-list li a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        ul.projetos-list li:hover {
+            background-color: #ece4ff;
+            transform: scale(1.03);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Leandro Pinheiro</h1>
+        <p class="tagline">Programando o futuro, uma linha de cada vez</p>
+        <nav>
+            <a href="{% url 'portfolio:index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Home</a>
+            <a href="{% url 'portfolio:sobre' %}" class="{% if request.resolver_match.url_name == 'sobre' %}active{% endif %}">Sobre</a>
+            <a href="{% url 'portfolio:interesses' %}" class="{% if request.resolver_match.url_name == 'interesses' %}active{% endif %}">Interesses</a>
+            <a href="{% url 'portfolio:projetos' %}" class="{% if request.resolver_match.url_name == 'projetos' or request.resolver_match.url_name == 'projeto_path' %}active{% endif %}">Projetos</a>
+            <a href="{% url 'portfolio:tecnologias' %}" class="{% if request.resolver_match.url_name == 'tecnologias' or request.resolver_match.url_name == 'tecnologia_path' %}active{% endif %}">Tecnologias</a>
+            <a href="{% url 'portfolio:cv' %}" class="{% if request.resolver_match.url_name == 'cv' %}active{% endif %}">CV</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+
+    <footer>🍋 &copy; {% now "d/m/Y" %} Programação Web, Universidade Lusófona, Leandro Pinheiro 🦊</footer>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% extends 'portfolio/base.html' %}
+
+    {% block main %}
+    
+        <section style="max-width: 800px; margin: 2rem auto; font-family: sans-serif;">
+        
+            <header style="background-color: #aedcb9; padding: 15px; border-radius: 8px; margin-bottom: 2rem;">
+                <h1 style="margin: 0;">Sobre a Aplicação</h1>
+                <p>Esta aplicação foi desenvolvida como parte do projeto académico da unidade curricular, utilizando o framework Django e outras ferramentas modernas de desenvolvimento web.</p>
+            </header>
+        
+            <section style="background-color: #f0fff0; padding: 15px; border-radius: 8px; margin-bottom: 2rem;">
+                <h2>Tecnologias Utilizadas</h2>
+                <ul>
+                    <li><strong>Backend:</strong> Django (Python)</li>
+                    <li><strong>Frontend:</strong> HTML, CSS (inline), Jinja2 (templates Django)</li>
+                    <li><strong>Base de Dados:</strong> MySQL (PythonAnywhere)</li>
+                    <li><strong>Serviços:</strong> PythonAnywhere (hospedagem), GitHub (controlo de versões)</li>
+                    <li><strong>Ferramentas:</strong> Django Admin, draw.io, ChatGPT</li>
+                </ul>
+        
+                <h2>Arquitetura da Aplicação (MVT)</h2>
+                <p>A aplicação segue o padrão <strong>MVT (Model-View-Template)</strong>, típico do Django:</p>
+                <ul>
+                    <li><strong>Model:</strong> Contém a estrutura de dados (ex: Projeto, Tecnologia, Disciplina, etc.)</li>
+                    <li><strong>View:</strong> Funções Python que controlam a lógica da aplicação e ligação entre dados e páginas</li>
+                    <li><strong>Template:</strong> Ficheiros HTML que definem o que o utilizador vê</li>
+                </ul>
+        
+                <img src="/media/mvt.png" alt="Diagrama DER" style="max-width: 100%; border-radius: 8px; margin-top: 1rem;">
+        
+                <h2>Modelação e Diagrama DER</h2>
+                <p>A aplicação está suportada por vários modelos com relações entre si:</p>
+                <ul>
+                    <li><strong>Projeto</strong> com relações ManyToMany com <strong>Tecnologia</strong> e <strong>Conceito</strong></li>
+                    <li><strong>Disciplina</strong> com ManyToMany com <strong>Docente</strong></li>
+                    <li><strong>Curiosidades</strong> em relação OneToOne com Projeto</li>
+                    <li><strong>Imagem</strong> com ForeignKey para Projeto</li>
+                </ul>
+                <img src="/media/DER.png" alt="Diagrama DER" style="max-width: 100%; border-radius: 8px; margin-top: 1rem;">
+        
+                <h2>Estrutura das Páginas</h2>
+                <img src="/media/sitemap.png" alt="Diagrama DER" style="max-width: 100%; border-radius: 8px; margin-top: 1rem;">
+        
+                <h2>Repositório GitHub</h2>
+                <p>🔗 <a href="#" style="text-decoration: none; color: #5e3fbe; font-weight: bold;">Ver código no GitHub</a></p>
+        
+            </section>
+        
+        </section>
+    
+    {% endblock %}

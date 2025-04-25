@@ -1,0 +1,12 @@
+{% extends 'portfolio/base.html' %}
+
+    {% block main %}
+
+        <h2>Projetos</h2>
+        <ul class="projetos-list">
+            {% for projeto in projetos.all %}
+            <li> <a href="{% url 'portfolio:projeto_path' projeto.id %}"> {{ projeto.nome }} </a> </li>
+            {% endfor %}
+        </ul>
+
+    {% endblock %}

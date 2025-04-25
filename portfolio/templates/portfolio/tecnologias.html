@@ -1,0 +1,12 @@
+{% extends 'portfolio/base.html' %}
+
+    {% block main %}
+
+        <h2>Tecnologias</h2>
+        <ul class="projetos-list">
+            {% for tecnologia in tecnologias.all %}
+            <li> <a href="{% url 'portfolio:tecnologia_path' tecnologia.id %}"> {{ tecnologia }} </a> </li>
+            {% endfor %}
+        </ul>
+
+    {% endblock %}

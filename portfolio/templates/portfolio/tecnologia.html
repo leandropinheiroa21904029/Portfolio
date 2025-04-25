@@ -1,0 +1,64 @@
+{% extends 'portfolio/base.html' %}
+
+    {% block main %}
+
+        <section style="max-width: 800px; margin: 2rem auto; font-family: sans-serif;">
+
+            <header style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding: 10px; background-color: #aedcb9; border-radius: 8px;">
+                <h2 style="margin: 0; flex: 1; text-align: left;">{{ tecnologia.nome }}</h2>
+                {% if tecnologia.logo %}
+                    <img src="{{ tecnologia.logo.url }}" alt="{{ tecnologia.nome }} logo" style="height: 60px; border-radius: 8px;">
+                {% endif %}
+            </header>
+
+            <section style="background-color: #f0fff0; padding: 15px; border-radius: 8px; margin-bottom: 2rem;">
+                <h3 style="margin-top: 0; text-align: left;">Sobre:</h3>
+                <p style="text-align: left;">{{ tecnologia.descricao }}</p>
+                {% if tecnologia.link %}
+                    <p style="text-align: center;">
+                        <a href="{{ tecnologia.link }}" target="_blank" style="color: #5e3fbe; text-decoration: none; font-weight: bold;">
+                            🔗 Página oficial desta tecnologia
+                        </a>
+                    </p>
+                {% endif %}
+            </section>
+
+            <h3 style="text-align: center;">Used in Projects:</h3>
+            <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                {% for projeto in tecnologia.tecnologias.all %}
+                    <li style="background: #f0fff0; padding: 8px 12px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: background-color 0.3s, transform 0.2s;">
+                        <a href="{% url 'portfolio:projeto_path' projeto.id %}" style="text-decoration: none; color: #333; display: block; padding: 6px 10px;">
+                            {{ projeto.nome }}
+                        </a>
+                    </li>
+                {% empty %}
+                    <li>Não existem projetos que usem esta tecnologia</li>
+                {% endfor %}
+            </ul>
+
+            <style>
+                ul li {
+                    transition: background-color 0.3s, transform 0.2s;
+                }
+
+                ul li:hover {
+                    background-color: #ece4ff !important;
+                    transform: scale(1.03);
+                }
+
+                ul li a {
+                    display: block;
+                    padding: 6px 10px;
+                    color: #333;
+                    text-decoration: none;
+                    transition: color 0.2s;
+                }
+
+                ul li:hover a {
+                    color: black;
+                }
+            </style>
+
+        </section>
+
+    {% endblock %}

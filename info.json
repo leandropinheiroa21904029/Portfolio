@@ -1,0 +1,164 @@
+[
+  {
+    "nome": "Lançamento do Projétil",
+    "descricao": "O programa pede a altura, a velocidade inicial e o ângulo. Temos o output de um gráfico do trajeto do projétil consoante os inputs inseridos. Podemos repetir o programa o quanto desejarmos.",
+    "disciplina": {
+      "nome": "Fundamentos de Física",
+      "ano": 1,
+      "semestre": 1,
+      "docentes": [],
+      "moodle": null,
+      "ulusofona": null,
+      "conceitos": [
+        {"nome": "Referencial, posição e trajetória", "descricao": ""},
+        {"nome": "Movimento no espaço. Projéteis", "descricao": ""},
+        {"nome": "Programação em Kotlin", "descricao": "Leitura do teclado, escrita no ecrã"}
+      ]
+    },
+    "tecnologias": [
+      {"nome": "Kotlin", "logo": null, "descricao": "", "link": null}
+    ],
+    "curiosidades": {"desafios": null, "interesses": null}
+  },
+  {
+    "nome": "Jogo das Tendas",
+    "descricao": "Simula uma grelha com árvores onde o jogador posiciona tendas respeitando regras de proximidade e ligação.",
+    "disciplina": {
+      "nome": "Fundamentos de Programação",
+      "ano": 1,
+      "semestre": 1,
+      "docentes": [],
+      "moodle": null,
+      "ulusofona": null,
+      "conceitos": [
+        {"nome": "Programação em Kotlin", "descricao": "Ciclos, funções, arrays, arrays2D, leitura e escrita"}
+      ]
+    },
+    "tecnologias": [
+      {"nome": "Kotlin", "logo": null, "descricao": "", "link": null},
+      {"nome": "IntelliJ", "logo": null, "descricao": "", "link": null}
+    ],
+    "curiosidades": {"desafios": null, "interesses": null}
+  },
+  {
+    "nome": "Fórum no Moodle – discussão & partilha",
+    "descricao": "Fórum de discussão no Moodle sobre temas de marketing, promovendo interatividade.",
+    "disciplina": {
+      "nome": "Teoria e Prática de Marketing",
+      "ano": 1,
+      "semestre": 1,
+      "docentes": [],
+      "moodle": null,
+      "ulusofona": null,
+      "conceitos": [
+        {"nome": "Pesquisa de informação", "descricao": ""},
+        {"nome": "Novas tecnologias no Marketing", "descricao": ""},
+        {"nome": "IA no Marketing Digital", "descricao": ""}
+      ]
+    },
+    "tecnologias": [
+      {"nome": "Moodle", "logo": null, "descricao": "", "link": null}
+    ],
+    "curiosidades": {"desafios": null, "interesses": null}
+  },
+  {
+    "nome": "Batalha Naval",
+    "descricao": "Versão de linha de comando do jogo Batalha Naval em Kotlin.",
+    "disciplina": {
+      "nome": "Fundamentos de Programação",
+      "ano": 1,
+      "semestre": 1,
+      "docentes": [],
+      "moodle": null,
+      "ulusofona": null,
+      "conceitos": [
+        {"nome": "Programação em Kotlin", "descricao": "Ciclos, funções, arrays, leitura/escrita"}
+      ]
+    },
+    "tecnologias": [
+      {"nome": "Kotlin", "logo": null, "descricao": "", "link": null},
+      {"nome": "IntelliJ", "logo": null, "descricao": "", "link": null}
+    ],
+    "curiosidades": {"desafios": null, "interesses": null}
+  },
+  {
+    "nome": "Transmissão AM e FM",
+    "descricao": "Simulação e estudo de esquemas de transmissão de rádio.",
+    "disciplina": {
+      "nome": "Fundamentos de Electrónica",
+      "ano": 1,
+      "semestre": 2,
+      "docentes": [],
+      "moodle": null,
+      "ulusofona": null,
+      "conceitos": [
+        {"nome": "Teoria de circuitos", "descricao": ""}
+      ]
+    },
+    "tecnologias": [
+      {"nome": "Multisim", "logo": null, "descricao": "Simulação eletrónica SPICE", "link": null}
+    ],
+    "curiosidades": {"desafios": null, "interesses": null}
+  },
+  {
+    "nome": "Rock in DEISI",
+    "descricao": "App Java que consulta dados musicais de repositórios públicos com estruturas otimizadas.",
+    "disciplina": {
+      "nome": "Algoritmia e Estruturas de Dados",
+      "ano": 1,
+      "semestre": 2,
+      "docentes": [],
+      "moodle": null,
+      "ulusofona": null,
+      "conceitos": [
+        {"nome": "Algoritmos e estruturas de dados", "descricao": "Ordenação, pesquisa, árvores, hashtables"},
+        {"nome": "Otimizações", "descricao": "Buffering, análise de performance"}
+      ]
+    },
+    "tecnologias": [
+      {"nome": "Java", "logo": null, "descricao": "", "link": null},
+      {"nome": "IntelliJ", "logo": null, "descricao": "", "link": null},
+      {"nome": "JUnit", "logo": null, "descricao": "", "link": null},
+      {"nome": "ChatGPT", "logo": null, "descricao": "", "link": null}
+    ],
+    "curiosidades": {"desafios": null, "interesses": null}
+  },
+  {
+    "nome": "IT in competences development",
+    "descricao": "Projetos tecnológicos com foco em competências e apresentação para investidores.",
+    "disciplina": {
+      "nome": "Competências Comportamentais",
+      "ano": 1,
+      "semestre": 2,
+      "docentes": [],
+      "moodle": null,
+      "ulusofona": null,
+      "conceitos": [
+        {"nome": "Soft skills", "descricao": "Critical thinking, apresentações, personal marketing"}
+      ]
+    },
+    "tecnologias": [],
+    "curiosidades": {"desafios": null, "interesses": null}
+  },
+  {
+    "nome": "DEISI Jungle",
+    "descricao": "Jogo de tabuleiro com animais desenvolvido em Java com POO, UML e testes.",
+    "disciplina": {
+      "nome": "Linguagens de Programação II",
+      "ano": 2,
+      "semestre": 1,
+      "docentes": [],
+      "moodle": null,
+      "ulusofona": null,
+      "conceitos": [
+        {"nome": "POO", "descricao": "Encapsulamento, herança, polimorfismo"},
+        {"nome": "Design de software", "descricao": "UML, testes unitários, boas práticas"}
+      ]
+    },
+    "tecnologias": [
+      {"nome": "Java", "logo": null, "descricao": "", "link": null},
+      {"nome": "JUnit", "logo": null, "descricao": "", "link": null}
+    ],
+    "curiosidades": {"desafios": null, "interesses": null}
+  }
+]

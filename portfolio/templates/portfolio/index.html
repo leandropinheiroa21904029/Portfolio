@@ -1,0 +1,14 @@
+{% extends 'portfolio/base.html' %}
+
+    {% block main %}
+
+        <section style="max-width: 800px; margin: 2rem auto; font-family: sans-serif; text-align: center;">
+            <h1 style="font-size: 2rem;">🚀 Bem-vindo(a) ao meu Portfólio</h1>
+            <p style="margin-top: 1rem;">Sou Leandro Pinheiro, estudante de Engenharia Informática com gosto por tecnologia, criatividade e desenvolvimento web.</p>
+
+            <p style="margin-top: 1rem;">Aqui vais encontrar os projetos que desenvolvi, as tecnologias que domino, e um pouco sobre quem sou — tanto a nível académico como pessoal.</p>
+
+            <p style="margin-top: 2rem; font-weight: bold;">🌟 Explora os meus <a href="{% url 'portfolio:projetos' %}" style="color: #5e3fbe; text-decoration: none;">projetos</a>, descobre as <a href="{% url 'portfolio:tecnologias' %}" style="color: #5e3fbe; text-decoration: none;">tecnologias</a> que uso, ou conhece-me melhor na secção <a href="{% url 'portfolio:interesses' %}" style="color: #5e3fbe; text-decoration: none;">Interesses</a>.</p>
+        </section>
+
+    {% endblock %}

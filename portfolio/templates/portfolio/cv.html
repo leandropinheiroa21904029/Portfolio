@@ -1,0 +1,50 @@
+{% extends 'portfolio/base.html' %}
+
+    {% block main %}
+    
+        <section style="max-width: 800px; margin: 2rem auto; font-family: sans-serif;">
+        
+            <header style="background-color: #aedcb9; padding: 15px; border-radius: 8px; margin-bottom: 2rem;">
+                <h1 style="margin: 0;">Leandro Pinheiro</h1>
+                <p>Tenho 24 anos, sou estudante universitário na Faculdade Lusófona de Ciências e Tecnologias e estou no 3º ano do curso de Engenharia Informática.</p>
+            </header>
+        
+            <section style="background-color: #f0fff0; padding: 15px; border-radius: 8px; margin-bottom: 2rem;">
+                <h2>Experiência Profissional</h2>
+                <ul>
+                    <li><strong>MEO</strong> (Lisboa, desde 14/09/2023) – Técnico Superior 4<br><em>Operação, manutenção e gestão de redes empresariais</em></li>
+                    <li><strong>Pingo Doce</strong> (Santa Iria de Azoia, 08–12/2021) – Fruta e Legumes</li>
+                    <li><strong>Águia Real</strong> (Braga, 05–08/2019) – Empregado de Balcão</li>
+                    <li><strong>Coração da Sé</strong> (Lisboa, 05–08/2018) – Empregado de Mesa</li>
+                </ul>
+        
+                <h2>Educação e Formação</h2>
+                <ul>
+                    <li><strong>Licenciatura em Engenharia Informática</strong> (2018–Atual)<br>Universidade Lusófona de Humanidades e Tecnologias</li>
+                    <li><strong>12º ano</strong><br>Escola Secundária António Damásio</li>
+                </ul>
+        
+                <h2>Competências Linguísticas</h2>
+                <ul>
+                    <li><strong>Português:</strong> Língua materna</li>
+                    <li><strong>Inglês:</strong> Compreensão C1 | Produção oral B2 | Escrita B2</li>
+                </ul>
+        
+                <h2>Voluntariado</h2>
+                <ul>
+                    <li>Escuteiro durante 10 anos, com várias ações de voluntariado</li>
+                </ul>
+            </section>
+        
+            <section style="text-align: center;">
+                <p>
+                    🔗 <a href="{% url 'portfolio:projetos' %}" style="text-decoration: none; color: #5e3fbe; font-weight: bold;">Ver os meus projetos</a>
+                </p>
+                <p>
+                    🧠 <a href="{% url 'portfolio:tecnologias' %}" style="text-decoration: none; color: #5e3fbe; font-weight: bold;">Tecnologias que domino</a>
+                </p>
+            </section>
+        
+        </section>
+    
+    {% endblock %}
